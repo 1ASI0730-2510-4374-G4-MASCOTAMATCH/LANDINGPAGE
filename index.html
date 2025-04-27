@@ -3,155 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mascota Match</title>
+  <title>Login - MascotaMatch</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #67C3F3, #5A98F2);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 3em 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      width: 350px;
+      text-align: center;
+      position: absolute;
+    }
+
+    .login-container h2 {
+      margin-bottom: 1.5em;
+      color: #333;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 0.75em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 0.75em;
+      background-color: #56EFA2;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .login-container p {
+      margin-top: 1em;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <img src="images/logo.jpeg" alt="MascotaMatch Logo" class="logo-img">
-    </div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Plans</a>
-      <a href="#">FAQ</a>
-    </nav>
-  </header>
+  <div class="login-container" id="loginBox">
+    <h2>Login to MascotaMatch</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a>.</p>
+  </div>
 
-  <section class="main-home">
-    <div class="main-home-text">
-      <h1>Comprehensive care for your pet</h1>
-      <p>Connect with veterinarians, walkers, and certified caregivers near you. All from one app, with tailored plans.</p>
-      <button>See Services</button>
-    </div>
-    <div class="main-home-image">
-      <img src="images/beagle.png" alt="Beagle">
-    </div>
-  </section>
+  <div class="login-container hidden" id="registerContainer">
+    <h2>Create your account</h2>
+    <form id="registerForm">
+      <input type="email" id="newEmail" placeholder="Email" required />
+      <input type="password" id="newPassword" placeholder="Password" required />
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="#" onclick="showLogin()">Login</a>.</p>
+  </div>
 
-  <section class="services-section">
-    <h2>Our Services</h2>
-    <p class="services-description">
-      We specialize in comprehensive pet care, offering safe and professional services that ensure their well-being at all times. From walks and grooming to emergency care and vaccination reminders, we take care of everything so your pet is always happy and healthy!
-    </p>
-    <div class="services-grid">
-      <div class="service-card">
-        <img src="images/paseos.png" alt="Paseos Seguros">
-        <h3>Safe Walks</h3>
-        <p>Supervised walks so your pet can exercise safely.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/medicina.jpeg" alt="Chequeos Veterinarios">
-        <h3>Veterinary Checkups</h3>
-        <p>Personalized exams and ongoing professional guidance.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/grooming.png" alt="Grooming">
-        <h3>Grooming</h3>
-        <p>Baths, trims, and brushing to keep your pet clean and happy.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/medice-recipe.png" alt="Recordatorio de vacunas">
-        <h3>Vaccination Reminders</h3>
-        <p>Get alerts to keep your pet’s vaccination schedule up to date.</p>
-      </div>
-      <div class="service-card">
-        <img src="images/emergency.png" alt="Emergencia">
-        <h3>Emergencies</h3>
-        <p>Fast, professional care when you need it most.</p>
-      </div>
-    </div>
-  </section>
+  <script>
+    let registeredUsers = {};
 
-  <section class="plans-section">
-    <h2>Plans</h2>
-    <div class="plans-grid">
-      <div class="plan-card">
-        <img src="images/plan-mini.jpg" alt="plan-Mini">
-        <h3>Mini Plan</h3>
-        <p>Ideal for those looking for essential services for their pet.</p>
-        <ul>
-          <li>1 weekly walk</li>
-          <li>Vaccine reminders</li>
-          <li>Access to certified suppliers</li>
-          <li>Monthly virtual review with veterinarian</li>
-        </ul>
-      </div>
-      <div class="plan-card">
-        <img src="images/plan-completo.jpg" alt="plan-Completo">
-        <h3>Complete Plan</h3>
-        <ul>
-          <li>2 walks per week</li>
-          <li>1 grooming session per month</li>
-          <li>1 at-home vet visit</li>
-          <li>Vaccine and deworming control</li>
-          <li>24/7 app support</li>
-        </ul>
-      </div>
-      <div class="plan-card">
-        <img src="images/plan-vip.png" alt="Vip-plan">
-        <h3>VIP Plan</h3>
-        <ul>
-          <li>Unlimited walks</li>
-          <li>Priority emergency care</li>
-          <li>Personalized vaccination reminders</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
 
-  <section class="faq-section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <img src="images/interrogation.png" alt="Icon 1">
-        <h3>How does the walking service work?</h3>
-        <p>You just have to download the app, choose the plan that suits you most and complete the record with your data.</p>
-      </div>
-      <div class="faq-item">
-        <img src="images/interrogation.png" alt="Icon 2">
-        <h3>Are suppliers certified?</h3>
-        <p>Yes, all veterinarians, walkers, groomers and caregivers are verified and have the necessary experience to offer excellent service.</p>
-      </div>
-      <div class="faq-item">
-        <img src="images/interrogation.png" alt="Icon 3">
-        <h3>How can I cancel my subscription?</h3>
-        <p>You can cancel your subscription at any time from the app, and you will not be charged the following month.</p>
-      </div>
-      <div class="faq-item">
-        <img src="images/interrogation.png" alt="Icon 4">
-        <h3>How can I subscribe to a plan?</h3>
-        <p>You just have to download the app, choose the plan that suits you most and complete the record with your data.</p>
-      </div>
-      <div class="faq-item">
-        <img src="images/interrogation.png" alt="Icon 5">
-        <h3>Can I change plan at any time?</h3>
-        <p>Yes, you can change plan when you want it from the app, without additional charges.</p>
-      </div>
-      <div class="faq-item">
-        <img src="images/interrogation.png" alt="Icon 6">
-        <h3>What happens if my pet needs emergency care?</h3>
-        <p>With the complete plan and VIP, you have 24/7 support through the app. In addition, you can contact urgent veterinarians if necessary.</p>
-      </div>
-    </div>
-  </section>
+    loginForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="images/logo.jpeg" alt="MascotaMatch Logo">
-      </div>
-      <div class="footer-links">
-        <a href="#">Districts</a>
-        <a href="#">Help</a>
-        <a href="#">Contact</a>
-      </div>
-    </div>
-    <p> © 2025 MascotaMatch all rights reserved.</p>
-  </footer>
+      if (registeredUsers[email] && registeredUsers[email] === password) {
+        window.location.href = "home.html";
+      } else {
+        alert("Invalid credentials or not registered.");
+      }
+    });
+
+    registerForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("newEmail").value;
+      const password = document.getElementById("newPassword").value;
+
+      if (!registeredUsers[email]) {
+        registeredUsers[email] = password;
+        alert("Registered successfully. Please log in.");
+        showLogin();
+      } else {
+        alert("This email is already registered.");
+      }
+    });
+
+    function showRegister() {
+      document.getElementById("loginBox").classList.add("hidden");
+      document.getElementById("registerContainer").classList.remove("hidden");
+    }
+
+    function showLogin() {
+      document.getElementById("loginBox").classList.remove("hidden");
+      document.getElementById("registerContainer").classList.add("hidden");
+    }
+  </script>
 
 </body>
 </html>
