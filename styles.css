@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feature/plan_vip
 
+=======
+>>>>>>> origin/feature/animaciones
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -11,6 +14,13 @@ body {
   color: #333;
 }
 
+<<<<<<< HEAD
+=======
+html {
+  scroll-behavior: smooth;
+}
+
+>>>>>>> origin/feature/animaciones
 header {
   display: flex;
   justify-content: space-between;
@@ -28,10 +38,25 @@ header {
 }
 
 nav a {
+<<<<<<< HEAD
   margin-left: 1.5em;
   text-decoration: none;
   color: #000;
   font-weight: 500;
+=======
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #67C3F3;
+  color: white;
+>>>>>>> origin/feature/animaciones
 }
 
 .main-home {
@@ -60,6 +85,15 @@ nav a {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+<<<<<<< HEAD
+=======
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.main-home-text button:hover {
+  background-color: #89f7c0;
+  color: #ffffff;
+>>>>>>> origin/feature/animaciones
 }
 
 .services-section, .faq-section {
@@ -146,8 +180,17 @@ nav a {
   padding: 0.5em 1em;
   border-radius: 5px;
   cursor: pointer;
+<<<<<<< HEAD
 }
 
+=======
+  transition: background-color 0.3s, color 0.3s;
+}
+.plan-card-content button:hover {
+  color: #ffffff;
+  background-color: #5A98F2;
+}
+>>>>>>> origin/feature/animaciones
 footer {
   background: linear-gradient(to right, #67C3F3, #5A98F2);
   padding: 2em;
@@ -180,6 +223,7 @@ footer {
   color: black;
   border: none;
   border-radius: 5px;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }<<<<<<< HEAD
 * {
@@ -557,3 +601,13 @@ footer {
 =======
 }
 >>>>>>> origin/feature/plan_vip
+=======
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-links button:hover {
+  background-color: #89f7c0;
+  color: #ffffff;
+}
+>>>>>>> origin/feature/animaciones
