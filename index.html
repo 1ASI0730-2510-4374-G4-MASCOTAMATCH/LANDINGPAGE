@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mascota Match</title>
+  <title data-i18n-key="title">Mascota Match</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -14,19 +14,22 @@
       <img src="images/logo.jpeg" alt="MascotaMatch Logo" class="logo-img">
     </div>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#plans">Plans</a>
-      <a href="#faq">FAQ</a>
+      <a href="#home" data-i18n-key="navHome">Home</a>
+      <a href="#services" data-i18n-key="navServices">Services</a>
+      <a href="#plans" data-i18n-key="navPlans">Plans</a>
+      <a href="#faq" data-i18n-key="navFAQ">FAQ</a>
     </nav>
+    <button id="lang-toggle" style="margin-left: 20px; padding: 5px 10px; cursor: pointer;" data-i18n-key="langToggle">ES</button>
   </header>
 
   <!-- Home -->
   <section class="main-home" id="home">
     <div class="main-home-text">
-      <h1>Comprehensive care for your pet</h1>
-      <p>Connect with veterinarians, walkers and certified caregivers near you. All from an app, with tailored plans.</p>
-      <a href="#services"><button>See Services</button></a>
+      <h1 data-i18n-key="homeTitle">Comprehensive care for your pet</h1>
+      <p data-i18n-key="homeDesc">Connect with veterinarians, walkers and certified caregivers near you. All from an app, with tailored plans.</p>
+      <a href="https://lively-mushroom-0f1def61e.1.azurestaticapps.net/" target="_blank" rel="noopener noreferrer">
+        <button data-i18n-key="homeButton">Discover Our App</button>
+      </a>
     </div>
     <div class="main-home-image">
       <img src="images/beagle.png" alt="Beagle">
@@ -35,86 +38,89 @@
 
   <!-- Services -->
   <section class="services-section" id="services">
-    <h2>Our Services</h2>
+    <h2 data-i18n-key="servicesTitle">Our Services</h2>
     <div class="service-cards">
       <div class="service-card">
         <img src="images/paseos.png" alt="Walks">
-        <h3>Safe Walks</h3>
-        <p>We offer supervised walks so your pet can enjoy physical activity in a safe and controlled environment.</p>
+        <h3 data-i18n-key="serviceWalks">Safe Walks</h3>
+        <p data-i18n-key="serviceWalksDesc">We offer supervised walks so your pet can enjoy physical activity in a safe and controlled environment.</p>
       </div>
       <div class="service-card">
         <img src="images/medice-recipe.png" alt="Vet Check">
-        <h3>Veterinary Check-Ups</h3>
-        <p>We perform regular checkups to ensure your pet’s health, with personalized consultations and advice.</p>
+        <h3 data-i18n-key="serviceVetCheck">Veterinary Check-Ups</h3>
+        <p data-i18n-key="serviceVetCheckDesc">We perform regular checkups to ensure your pet’s health, with personalized consultations and advice.</p>
       </div>
       <div class="service-card">
         <img src="images/grooming.png" alt="Grooming">
-        <h3>Grooming</h3>
-        <p>We care for your pet’s coat with baths, cuts and grooming. Hygiene and well-being come first.</p>
+        <h3 data-i18n-key="serviceGrooming">Grooming</h3>
+        <p data-i18n-key="serviceGroomingDesc">We care for your pet’s coat with baths, cuts and grooming. Hygiene and well-being come first.</p>
       </div>
       <div class="service-card">
         <img src="images/emergency.png" alt="Emergencies">
-        <h3>Emergencies</h3>
-        <p>Rapid emergency care, with professionals ready to care for your pet when they need it most.</p>
+        <h3 data-i18n-key="serviceEmergencies">Emergencies</h3>
+        <p data-i18n-key="serviceEmergenciesDesc">Rapid emergency care, with professionals ready to care for your pet when they need it most.</p>
       </div>
     </div>
 
     <!-- Video section -->
     <div class="service-videos">
-      <h3>Watch Our Services in Action</h3>
+      <h3 data-i18n-key="serviceVideosTitle">Watch Our Services in Action</h3>
       <div class="videos-container">
-        <video controls width="320" height="240">
-          <source src="images/vid1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <video controls width="320" height="240">
-          <source src="images/vid2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <div class="video-wrapper">
+          <h4 data-i18n-key="aboutProduct">About the Product</h4>
+          <video controls width="320" height="240">
+            <source src="images/vid1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-wrapper">
+          <h4 data-i18n-key="aboutTeam">About the Team</h4>
+          <video controls width="320" height="240">
+            <source src="images/vid2.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Plans -->
   <section class="plans-section" id="plans">
-    <h2>Plans</h2>
+    <h2 data-i18n-key="plansTitle">Plans</h2>
     <div class="plan-cards">
-
       <div class="plan-card">
         <img src="images/plan-vip.png" alt="VIP Plan">
         <div class="plan-card-content">
-          <h3>VIP Plan</h3>
-          <p>Access to all our exclusive services, such as unlimited walks, priority attention in emergencies and personalized vaccine reminders.</p>
-          <a href="plan_vip.html" style="text-decoration:none;"><button>Read more</button></a>
+          <h3 data-i18n-key="planVIP">VIP Plan</h3>
+          <p data-i18n-key="planVIPDesc">Access to all our exclusive services, such as unlimited walks, priority attention in emergencies and personalized vaccine reminders.</p>
+          <a href="plan_vip.html" style="text-decoration:none;"><button data-i18n-key="readMore">Read more</button></a>
         </div>
       </div>
 
       <div class="plan-card">
         <img src="images/plan-completo.jpg" alt="Complete Plan">
         <div class="plan-card-content">
-          <h3>Complete Plan</h3>
+          <h3 data-i18n-key="planComplete">Complete Plan</h3>
           <ul>
-            <li>2 weekly walks</li>
-            <li>1 grooming session per month</li>
-            <li>1 home veterinary visit</li>
-            <li>Vaccine and deworming monitoring</li>
-            <li>24/7 support in the app</li>
+            <li data-i18n-key="planCompleteWalks">2 weekly walks</li>
+            <li data-i18n-key="planCompleteGrooming">1 grooming session per month</li>
+            <li data-i18n-key="planCompleteVet">1 home veterinary visit</li>
+            <li data-i18n-key="planCompleteVaccine">Vaccine and deworming monitoring</li>
+            <li data-i18n-key="planCompleteSupport">24/7 support in the app</li>
           </ul>
-          <a href="plan_complete.html" style="text-decoration:none;"><button>Read more</button></a>
+          <a href="plan_complete.html" style="text-decoration:none;"><button data-i18n-key="readMore">Read more</button></a>
         </div>
       </div>
 
       <div class="plan-card">
         <img src="images/plan-mini.jpg" alt="Mini Plan">
         <div class="plan-card-content">
-          <h3>Mini Plan</h3>
+          <h3 data-i18n-key="planMini">Mini Plan</h3>
           <ul>
-            <li>1 weekly walk</li>
-            <li>Vaccine reminders</li>
-            <li>Access to certified suppliers</li>
-            <li>Monthly virtual review with veterinarian</li>
+            <li data-i18n-key="planMiniWalks">1 weekly walk</li>
+            <li data-i18n-key="planMiniVaccine">Vaccine reminders</li>
+            <li data-i18n-key="planMiniSuppliers">Access to certified suppliers</li>
+            <li data-i18n-key="planMiniReview">Monthly virtual review with veterinarian</li>
           </ul>
-          <a href="plan_mini.html" style="text-decoration:none;"><button>Read more</button></a>
+          <a href="plan_mini.html" style="text-decoration:none;"><button data-i18n-key="readMore">Read more</button></a>
         </div>
       </div>
 
@@ -123,60 +129,86 @@
 
   <!-- FAQ -->
   <section class="faq-section" id="faq">
-    <h2>Frequently Asked Questions</h2>
+    <h2 data-i18n-key="faqTitle">Frequently Asked Questions</h2>
     <div class="faq-cards">
       <div class="faq-card">
         <img src="images/interrogation.png" alt="Walking">
-        <h3>How does the walking service work?</h3>
-        <p>Our certified walkers will be available according to your area. Choose the schedule that suits you and enjoy a safe walk for your pet.</p>
+        <h3 data-i18n-key="faqWalkingTitle">How does the walking service work?</h3>
+        <p data-i18n-key="faqWalkingDesc">Our certified walkers will be available according to your area. Choose the schedule that suits you and enjoy a safe walk for your pet.</p>
       </div>
       <div class="faq-card">
         <img src="images/interrogation.png" alt="Certified">
-        <h3>Are suppliers certified?</h3>
-        <p>Yes, all veterinarians, walkers, groomers and caregivers are verified and have the necessary experience to offer excellent service.</p>
+        <h3 data-i18n-key="faqCertifiedTitle">Are suppliers certified?</h3>
+        <p data-i18n-key="faqCertifiedDesc">Yes, all veterinarians, walkers, groomers and caregivers are verified and have the necessary experience to offer excellent service.</p>
       </div>
       <div class="faq-card">
         <img src="images/interrogation.png" alt="Cancel">
-        <h3>How can I cancel my subscription?</h3>
-        <p>You can cancel your subscription at any time from the app, and you will not be charged the following month.</p>
+        <h3 data-i18n-key="faqCancelTitle">How can I cancel my subscription?</h3>
+        <p data-i18n-key="faqCancelDesc">You can cancel your subscription at any time from the app, and you will not be charged the following month.</p>
       </div>
       <div class="faq-card">
         <img src="images/interrogation.png" alt="Subscribe">
-        <h3>How can I subscribe to a plan?</h3>
-        <p>You just have to download the app, choose the plan that suits you most and complete the record with your data.</p>
+        <h3 data-i18n-key="faqSubscribeTitle">How can I subscribe to a plan?</h3>
+        <p data-i18n-key="faqSubscribeDesc">You just have to download the app, choose the plan that suits you most and complete the record with your data.</p>
       </div>
       <div class="faq-card">
         <img src="images/interrogation.png" alt="Change">
-        <h3>Can I change plan at any time?</h3>
-        <p>Yes, you can change plan when you want it from the app, without additional charges.</p>
+        <h3 data-i18n-key="faqChangeTitle">Can I change plan at any time?</h3>
+        <p data-i18n-key="faqChangeDesc">Yes, you can change plan when you want it from the app, without additional charges.</p>
       </div>
       <div class="faq-card">
         <img src="images/interrogation.png" alt="Emergencies">
-        <h3>What happens if my pet needs emergency care?</h3>
-        <p>With the complete plan and VIP, you have 24/7 support through the app. In addition, you can contact urgent veterinarians if necessary.</p>
+        <h3 data-i18n-key="faqEmergenciesTitle">What happens if my pet needs emergency care?</h3>
+        <p data-i18n-key="faqEmergenciesDesc">With the complete plan and VIP, you have 24/7 support through the app. In addition, you can contact urgent veterinarians if necessary.</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="logo">
-        <p>MascotaMatch</p>
+<footer>
+  <div class="footer-content">
+    <div class="logo">
+      <p data-i18n-key="footerLogo">MascotaMatch</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-section">
+        <strong data-i18n-key="footerDistrictTitle">District</strong>
+        <p data-i18n-key="footerDistrict">
+          Surquillo<br>San Borja<br>San Isidro
+        </p>
       </div>
-      <div class="footer-links">
-        <div><strong>District</strong><br>Surquillo<br>San Borja<br>San Isidro</div>
-        <div><strong>Help</strong><br>Help Center<br>Institutions<br>How it works</div>
-        <div><strong>Contact Support</strong><br>
-          <input type="email" placeholder="example@gmail.com"><br>
-          <button>Submit</button>
+      <div class="footer-section">
+        <strong data-i18n-key="footerFollowTitle">Follow Us</strong>
+        <div class="social-links">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/instagram-icon.png" alt="Instagram" class="social-icon"> Instagram
+          </a><br>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/facebook-icon.png" alt="Facebook" class="social-icon"> Facebook
+          </a><br>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/twitter-icon.png" alt="Twitter" class="social-icon"> Twitter
+          </a>
         </div>
       </div>
-      <div class="copyright">
-        © ManoloCorp Inc. S.A.C. TM &copy; 2025. All Rights Reserved.
+      <div class="footer-section contact-section">
+        <strong data-i18n-key="footerContactTitle">Contact</strong>
+        <p>
+          Email: <a href="mailto:contacto@mascotamatch.pe" class="contact-link">contacto@mascotamatch.pe</a><br>
+          Phone: <a href="tel:+51123456789" class="contact-link">01 234 5678</a><br>
+          WhatsApp: <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" class="contact-link">+51 987 654 321</a>
+        </p>
+        <p data-i18n-key="footerHours">
+          Customer Service Hours: Monday to Saturday: 8am to 9pm, Sunday: 8am to 8pm
+        </p>
       </div>
     </div>
-  </footer>
+    <div class="copyright">
+      <p data-i18n-key="footerCopyright">© ManoloCorp Inc. S.A.C. TM &copy; 2025. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
 
+  <script src="languageSwitcher.js"></script>
 </body>
 </html>
